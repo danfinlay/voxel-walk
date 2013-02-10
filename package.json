@@ -1,0 +1,11 @@
+{
+  "name": "Voxel-Walk",
+  "version": "0.0.1",
+  "dependencies": {
+    "voxel-engine": "0.5.3",
+    "painterly-textures": "0.0.3",
+    "voxel": "~0.1.5",
+    "voxel-debris": "0.0.4",
+    "minecraft-skin": "0.0.2"
+  }
+}
