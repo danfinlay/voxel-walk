@@ -33,7 +33,7 @@ var isMouseDown = false;
 var counter = 0;
 var firstRender = true;
 
-var startTime = Date.now();
+//var startTime = Date.now();
 var pausedTime = 0;
 var isRotating = true;
 var isPaused = false;
@@ -42,15 +42,16 @@ var isFunnyRunning = false;
 
 
 
-var walk = require('./')
+window.duckWalk = require('./')
 
 var render = function () {
 	window.webkitRequestAnimationFrame(render, renderer.domElement);
 	var oldRad = rad;
 	
-	var time = (Date.now() - startTime)/1000;
+	//var time = (Date.now() - startTime)/1000;
+	var time = Date.now()/1000;
 
-	walk.render(duck, time)
+	duckWalk.render(duck, time)
 
 	if(!isMouseDown) {
 		//mouseX*=0.95;

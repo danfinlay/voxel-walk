@@ -10,9 +10,25 @@ var walk = require('voxel-walk')
 ```
 In your render loop you pass it a time value and a minecraft-skin object (as can be found in the minecraft-skin module available on npm).
 ```
-var time = (Date.now() - startTime)/1000;
+var render = function () {
+	var time = Date.now()/1000
 	walk.render(duck, time)
+}
 ```
+You can tell the skin to start or stop walking with either of these functions (call each only once, or the acceleration change will continually reset.  You can test for walking state as well)
+```
+if(walk.isWalking()){
+	walk.stopWalking()
+}else{
+	walk.startWalking()
+}
+```
+By Default the walk is begun and ended in 1 second.  You can change this value like so:
+```
+walk.acceleration = 1.5
+```
+
+
 If you want to run the demo, just  run:
 ```
 //If you don't have browserify installed:

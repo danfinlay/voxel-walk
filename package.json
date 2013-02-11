@@ -1,6 +1,6 @@
 {
   "name": "voxel-walk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description":"A simple walk animation for minecraft-skin characters.",
   "dependencies": {
     "voxel-engine": "0.5.3",
