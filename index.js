@@ -4,8 +4,8 @@ var stoppedWalking = 0.0
 var walking = false
 var acceleration = 1.0
 
-exports.render = function(skin, time){
-
+exports.render = function(skin){
+	var time = Date.now()/1000
 	if(walking && time<startedWalking+acceleration){
 		walkSpeed = (time-startedWalking)/acceleration
 	}

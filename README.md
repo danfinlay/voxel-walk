@@ -8,11 +8,10 @@ Doesn't include an off switch yet.  Also seems to ruin textures at the moment.
 ```
 var walk = require('voxel-walk')
 ```
-In your render loop you pass it a time value and a minecraft-skin object (as can be found in the minecraft-skin module available on npm).
+In your render loop you pass it a minecraft-skin object for each tick (npm minecraft-skin).  For example, if you hav a minecraft-skin named duck:
 ```
 var render = function () {
-	var time = Date.now()/1000
-	walk.render(duck, time)
+	walk.render(duck)
 }
 ```
 You can tell the skin to start or stop walking with either of these functions (call each only once, or the acceleration change will continually reset.  You can test for walking state as well)
