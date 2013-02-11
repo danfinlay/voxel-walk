@@ -25,7 +25,7 @@ if(walk.isWalking()){
 ```
 By Default the walk is begun and ended in 1 second.  You can change this value like so:
 ```
-walk.acceleration = 1.5
+walk.setAcceleration(1.5)
 ```
 
 

@@ -26,15 +26,29 @@ exports.render = function(skin, time){
 }
 
 exports.startWalking = function(){
+	var now = Date.now()/1000
 	walking = true
-	startedWalking = Date.now()/1000
+	if(stoppedWalking+acceleration>now){
+		var progress = now - stoppedWalking;
+
+		startedWalking = now - (stoppedWalking + acceleration - now)
+	}else{
+		startedWalking = Date.now()/1000
+	}
 }
 exports.stopWalking = function(){
+	var now = Date.now()/1000
 	walking = false
-	stoppedWalking = Date.now()/1000
+	if(startedWalking+acceleration>now){
+		stoppedWalking = now - (startedWalking + acceleration - now)
+	}else{
+		stoppedWalking = Date.now()/1000
+	}
 }
 exports.isWalking = function(){
 	return walking
 }
 
-exports.acceleration = acceleration
+exports.setAcceleration = function(newA){
+	acceleration = newA
+}
