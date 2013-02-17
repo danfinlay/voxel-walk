@@ -3,8 +3,7 @@ Spreading the good word.  Using --save updates your package.json automatically.
 
 A simple walk cycle animation for minecraft-skin characters (used in Voxel.js), using code ripped directly out of Daniel Hede's "[Minecraft Items](http://djazz.mine.nu/lab/minecraft_items/)", the same project that birthed the minecraft-skin module.
 
-Doesn't include an off switch yet.  Also seems to ruin textures at the moment.
-
+[Run this example.](http://danfinlay.com/projects/voxeljs/walk/)
 ```
 var walk = require('voxel-walk')
 ```
