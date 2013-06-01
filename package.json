@@ -1,12 +1,12 @@
 {
   "name": "voxel-walk",
   "version": "0.0.4",
-  "description":"A simple walk animation for minecraft-skin characters.",
+  "description": "A simple walk animation for minecraft-skin characters.",
   "dependencies": {
     "voxel-engine": "0.5.3",
     "painterly-textures": "0.0.3",
     "voxel": "~0.1.5",
     "voxel-debris": "0.0.4",
-    "minecraft-skin": "0.0.2"
+    "minecraft-skin": "~0.1.2"
   }
 }
