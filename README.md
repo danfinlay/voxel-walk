@@ -13,19 +13,7 @@ var render = function () {
 	walk.render(duck)
 }
 ```
-You can tell the skin to start or stop walking with either of these functions (call each only once, or the acceleration change will continually reset.  You can test for walking state as well)
-```
-if(walk.isWalking()){
-	walk.stopWalking()
-}else{
-	walk.startWalking()
-}
-```
-By Default the walk is begun and ended in 1 second.  You can change this value like so:
-```
-walk.setAcceleration(1.5)
-```
-
+When called, the walk function automatically detects the velocity of the skin, and eases the stride to an appropriate magnitude.
 
 If you want to run the demo, just  run:
 ```
